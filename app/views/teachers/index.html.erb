@@ -1,0 +1,16 @@
+<h1>Teachers</h1>
+
+<p>
+    <%= lorem %>
+</p>
+
+<ul>
+    <% @teachers.each do |teacher| %>
+        <li>
+            <%= teacher.name %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to 'New Teacher', new_teacher_path %>
+<%= link_to 'Students', students_path %>
