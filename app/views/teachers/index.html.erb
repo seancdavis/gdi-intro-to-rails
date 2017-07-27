@@ -8,6 +8,8 @@
     <% @teachers.each do |teacher| %>
         <li>
             <%= teacher.name %>
+            <%= link_to 'Edit', edit_teacher_path(teacher) %>
+            <%= link_to 'Delete', teacher_path(teacher), method: :delete, data: { confirm: 'Are you sure?' } %>
         </li>
     <% end %>
 </ul>
